@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Kabra Tiara</title>
+
   <style>
     df-messenger {
-      --df-messenger-background-color: #bf360c;
-      --df-messenger-titlebar-color: red; /* ✅ header color */
+      --df-messenger-primary-color: red;        /* ✅ main theme */
+      --df-messenger-titlebar-color: red;       /* ✅ header */
+      --df-messenger-background-color: #bf360c; /* optional background */
     }
 
-    /* Override shadow DOM for header content */
+    /* Header layout */
     df-messenger::part(titlebar) {
       display: flex;
       align-items: center;
@@ -22,6 +24,7 @@
       gap: 8px;
     }
 
+    /* Logo before title */
     df-messenger::part(title)::before {
       content: "";
       display: inline-block;
@@ -33,6 +36,7 @@
       border-radius: 50%;
     }
 
+    /* Bot message styling */
     #messageList .message.bot-message {
       align-self: flex-start;
       background-color: rgb(229, 229, 229);
@@ -40,12 +44,16 @@
       margin-right: 75px;
     }
   </style>
+
+  <!-- Load Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
+
 <body>
- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  chat-title="Kabra‎‎_Tiara"
-  agent-id="a73f29c6-f0ae-4859-838f-47e968b67f07"
-  language-code="en"></df-messenger>
+  <df-messenger
+    chat-title="Kabra‎‎_Tiara"
+    agent-id="a73f29c6-f0ae-4859-838f-47e968b67f07"
+    language-code="en">
+  </df-messenger>
 </body>
 </html>
