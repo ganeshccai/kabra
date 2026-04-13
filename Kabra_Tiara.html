@@ -6,6 +6,7 @@
   <style>
     df-messenger {
       --df-messenger-background-color: #bf360c;
+      --df-messenger-titlebar-color: red; /* ✅ header color */
     }
 
     /* Override shadow DOM for header content */
@@ -32,15 +33,12 @@
       border-radius: 50%;
     }
 
-
     #messageList .message.bot-message {
-    align-self: flex-start;
-    background-color: rgb(229, 229, 229);
-    line-height: 1.4;
-    margin-right: 75px;
-}
-
-
+      align-self: flex-start;
+      background-color: rgb(229, 229, 229);
+      line-height: 1.4;
+      margin-right: 75px;
+    }
   </style>
 </head>
 <body>
